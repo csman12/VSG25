@@ -19,12 +19,20 @@
 			<Item Name="Report.html" Type="Document" URL="../sg_lib/Report.html"/>
 			<Item Name="VSG25A.lvlib" Type="Library" URL="../sg_lib/VSG25A.lvlib"/>
 		</Item>
+		<Item Name="AM Cluster.ctl" Type="VI" URL="../AM Cluster.ctl"/>
+		<Item Name="Factor Control.ctl" Type="VI" URL="../Factor Control.ctl"/>
+		<Item Name="FM Cluster.ctl" Type="VI" URL="../FM Cluster.ctl"/>
 		<Item Name="Frequency Hertz.ctl" Type="VI" URL="../Frequency Hertz.ctl"/>
-		<Item Name="Queue Control.ctl" Type="VI" URL="../Queue Control.ctl"/>
-		<Item Name="Sweep Cluster.ctl" Type="VI" URL="../Sweep Cluster.ctl"/>
-		<Item Name="VSG25A_Main.vi" Type="VI" URL="../VSG25A_Main.vi"/>
-		<Item Name="VSG25A_SelectDevice.vi" Type="VI" URL="../VSG25A_SelectDevice.vi"/>
-		<Item Name="VSG25A_StepSweep.vi" Type="VI" URL="../VSG25A_StepSweep.vi"/>
+		<Item Name="Pulse Cluster.ctl" Type="VI" URL="../Pulse Cluster.ctl"/>
+		<Item Name="RampSweep Cluster.ctl" Type="VI" URL="../RampSweep Cluster.ctl"/>
+		<Item Name="Shape Control.ctl" Type="VI" URL="../Shape Control.ctl"/>
+		<Item Name="VSG25_AM.vi" Type="VI" URL="../VSG25_AM.vi"/>
+		<Item Name="VSG25_FM.vi" Type="VI" URL="../VSG25_FM.vi"/>
+		<Item Name="VSG25_Main.vi" Type="VI" URL="../VSG25_Main.vi"/>
+		<Item Name="VSG25_Pulse.vi" Type="VI" URL="../VSG25_Pulse.vi"/>
+		<Item Name="VSG25_RampSweep.vi" Type="VI" URL="../VSG25_RampSweep.vi"/>
+		<Item Name="VSG25_SelectDevice.vi" Type="VI" URL="../VSG25_SelectDevice.vi"/>
+		<Item Name="VSG25_Sweep.vi" Type="VI" URL="../VSG25_Sweep.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
@@ -60,7 +68,80 @@
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
+			<Item Name="Queue Control.ctl" Type="VI" URL="../Queue Control.ctl"/>
 		</Item>
-		<Item Name="Build Specifications" Type="Build"/>
+		<Item Name="Build Specifications" Type="Build">
+			<Item Name="VSG25" Type="EXE">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{B55FCFB5-6073-49A0-AA59-D243BA9FEDF8}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{7C8D04A3-F032-481B-818C-437FF9462578}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{1281EE09-8B26-4F38-A310-0F794E5C5940}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">VSG25</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/VSG25</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{A7407EA8-94D5-432A-B027-538F29C5863A}</Property>
+				<Property Name="Bld_version.build" Type="Int">1</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">VSG25.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/VSG25/VSG25.exe</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/VSG25/data</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Source[0].itemID" Type="Str">{85114659-90F2-4B72-A821-906E7958151C}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/VSG25_FM.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/VSG25_Main.vi</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[2].type" Type="Str">VI</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/VSG25_Sweep.vi</Property>
+				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[3].type" Type="Str">VI</Property>
+				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/VSG25_SelectDevice.vi</Property>
+				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[4].type" Type="Str">VI</Property>
+				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/RampSweep Cluster.ctl</Property>
+				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[5].type" Type="Str">VI</Property>
+				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Shape Control.ctl</Property>
+				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[6].type" Type="Str">VI</Property>
+				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/Frequency Hertz.ctl</Property>
+				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[7].type" Type="Str">VI</Property>
+				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[8].itemID" Type="Ref">/My Computer/FM Cluster.ctl</Property>
+				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[8].type" Type="Str">VI</Property>
+				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[9].itemID" Type="Ref">/My Computer/sg_lib/VSG25A.lvlib</Property>
+				<Property Name="Source[9].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[9].type" Type="Str">Library</Property>
+				<Property Name="SourceCount" Type="Int">10</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">VSG25</Property>
+				<Property Name="TgtF_internalName" Type="Str">VSG25</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2019 </Property>
+				<Property Name="TgtF_productName" Type="Str">VSG25</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{91CD7B3D-AED5-4D14-9919-0F90EECCBB67}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">VSG25.exe</Property>
+			</Item>
+		</Item>
 	</Item>
 </Project>
