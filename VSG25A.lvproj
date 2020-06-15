@@ -1,6 +1,7 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="14008000">
 	<Item Name="My Computer" Type="My Computer">
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -10,6 +11,9 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Controls" Type="Folder" URL="../Controls">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
 		<Item Name="sg_lib" Type="Folder">
 			<Item Name="subvi" Type="Folder"/>
 			<Item Name="VIs" Type="Folder">
@@ -19,20 +23,10 @@
 			<Item Name="Report.html" Type="Document" URL="../sg_lib/Report.html"/>
 			<Item Name="VSG25A.lvlib" Type="Library" URL="../sg_lib/VSG25A.lvlib"/>
 		</Item>
-		<Item Name="AM Cluster.ctl" Type="VI" URL="../AM Cluster.ctl"/>
-		<Item Name="Factor Control.ctl" Type="VI" URL="../Factor Control.ctl"/>
-		<Item Name="FM Cluster.ctl" Type="VI" URL="../FM Cluster.ctl"/>
-		<Item Name="Frequency Hertz.ctl" Type="VI" URL="../Frequency Hertz.ctl"/>
-		<Item Name="Pulse Cluster.ctl" Type="VI" URL="../Pulse Cluster.ctl"/>
-		<Item Name="RampSweep Cluster.ctl" Type="VI" URL="../RampSweep Cluster.ctl"/>
-		<Item Name="Shape Control.ctl" Type="VI" URL="../Shape Control.ctl"/>
-		<Item Name="VSG25_AM.vi" Type="VI" URL="../VSG25_AM.vi"/>
-		<Item Name="VSG25_FM.vi" Type="VI" URL="../VSG25_FM.vi"/>
-		<Item Name="VSG25_Main.vi" Type="VI" URL="../VSG25_Main.vi"/>
-		<Item Name="VSG25_Pulse.vi" Type="VI" URL="../VSG25_Pulse.vi"/>
-		<Item Name="VSG25_RampSweep.vi" Type="VI" URL="../VSG25_RampSweep.vi"/>
-		<Item Name="VSG25_SelectDevice.vi" Type="VI" URL="../VSG25_SelectDevice.vi"/>
-		<Item Name="VSG25_Sweep.vi" Type="VI" URL="../VSG25_Sweep.vi"/>
+		<Item Name="SubVI" Type="Folder" URL="../SubVI">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="VSG25A_Main.vi" Type="VI" URL="../VSG25A_Main.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
@@ -68,7 +62,6 @@
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="Queue Control.ctl" Type="VI" URL="../Queue Control.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="VSG25" Type="EXE">
@@ -98,35 +91,35 @@
 				<Property Name="Source[0].itemID" Type="Str">{85114659-90F2-4B72-A821-906E7958151C}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/VSG25_FM.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref"></Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/VSG25_Main.vi</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/VSG25A_Main.vi</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[2].type" Type="Str">VI</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/My Computer/VSG25_Sweep.vi</Property>
+				<Property Name="Source[3].itemID" Type="Ref"></Property>
 				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[3].type" Type="Str">VI</Property>
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[4].itemID" Type="Ref">/My Computer/VSG25_SelectDevice.vi</Property>
+				<Property Name="Source[4].itemID" Type="Ref"></Property>
 				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[4].type" Type="Str">VI</Property>
 				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/My Computer/RampSweep Cluster.ctl</Property>
+				<Property Name="Source[5].itemID" Type="Ref"></Property>
 				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[5].type" Type="Str">VI</Property>
 				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Shape Control.ctl</Property>
+				<Property Name="Source[6].itemID" Type="Ref"></Property>
 				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[6].type" Type="Str">VI</Property>
 				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[7].itemID" Type="Ref">/My Computer/Frequency Hertz.ctl</Property>
+				<Property Name="Source[7].itemID" Type="Ref"></Property>
 				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[7].type" Type="Str">VI</Property>
 				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[8].itemID" Type="Ref">/My Computer/FM Cluster.ctl</Property>
+				<Property Name="Source[8].itemID" Type="Ref"></Property>
 				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[8].type" Type="Str">VI</Property>
 				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
